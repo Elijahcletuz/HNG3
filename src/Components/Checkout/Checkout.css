@@ -1,0 +1,173 @@
+.main_image{
+    width: 139px;
+    height: 155px;
+}
+
+.pay_heading{
+    width: 100%;
+    padding-left: 42px;
+}
+
+.pay_heading h1 {
+    line-height: 63px;
+}
+
+.pay_heading p{
+    line-height: 50px;
+}
+
+.itemspreview{
+    width: 70%;
+}
+
+.children {
+    display: flex;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.form_item1 label{
+
+    display: block;
+}
+
+.payment_info{
+    width: 30%;
+}
+
+.flex_pay {
+    display: flex;
+    margin-left: 42px;
+}
+
+.itempreview{
+    width: 70%;
+}
+
+.methods{
+    display: flex;
+}
+
+.form_total {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 46px;
+}
+
+.form_total p {
+    font-weight: 600;
+    line-height: 26px;
+    font-size: 14px;
+
+}
+.later {
+    display: flex;
+    gap: 10px;
+    line-height: 40px;
+}
+
+
+
+.arow {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.flexboth {
+    display: flex;
+    gap: 24px;
+    /* justify-content: space-between; */
+}
+
+.bank {
+    position: relative;
+    border: 1px solid black;
+    width: 72px;
+    text-align: center;
+    border-radius: 14px;
+    padding: 0px 5px;
+}
+
+.bank input{
+    position: absolute;
+    top: 0;
+}
+
+.bank img {
+    margin-top: 8px;
+}
+
+.methods {
+    display: flex;
+    gap: 39px;
+    
+}
+
+.form_item input {
+    font-size: 10px;
+    padding: 10px;
+    display: block;
+    width: 333px;
+    background-color: white;
+}
+
+
+.form_item1 input {
+    font-size: 10px;
+    width: 155px;
+    background-color: white;
+    padding: 10px;
+    display: block;
+}
+
+.form_item label, .form_item1 label {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 40px;
+}
+
+
+.payment_info h1 {
+    font-size: 20px;
+    line-height: 40px;
+}
+
+.payment_info h3{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 40px;
+}
+
+.push2{
+    padding-left: 200px;
+    display: flex;
+    align-items: center;
+
+}
+
+.push1 {
+    display: flex;
+    padding-left: 99px;
+    align-items: center;
+}
+
+.push3{
+    display: flex;
+    padding-left: 99px;
+    align-items: center;
+
+}
+
+.butch {
+    text-align: center;
+    margin: 0% 6%;
+    font-size: 14px;
+    display: flex;
+    padding: 19px 124px;
+    border-radius: 36px;
+    background: gray;
+    align-items: center;
+    justify-content: center;
+}
+
+

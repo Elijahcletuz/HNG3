@@ -1,0 +1,47 @@
+.icons img{
+    height: 30px;
+}
+
+.link-style {
+    text-decoration: none; 
+    color: inherit;         
+    cursor: pointer;        
+  }
+  
+  nav {
+    display: flex;
+    padding: 15px 0px 30px;
+    align-items: center;
+    margin: 0px 37px;
+    justify-content: space-between;
+}
+
+ul{
+    display: flex;
+    list-style-type: none;
+}
+
+.icons {
+    display: flex;
+    gap: 40px;
+}
+
+.carts_container{
+    position: relative;
+ 
+}
+
+.cart_count{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 13px;
+    width: 13px;
+    background-color: white;
+    border-radius: 50%;
+}
+nav h1{
+    font-size: 64px;
+    font-family: "Puppies Play", cursive;
+    font-weight: 400;
+}
