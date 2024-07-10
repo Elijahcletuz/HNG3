@@ -14,7 +14,7 @@ export function Navbar(){
            
               <div className='carts_container'>
                   <Link to='/Cart '><img src={basket} alt="" /></Link>
-                  <div className="cart_count">0</div>
+                  {/* <div className="cart_count">0</div> */}
               </div>
          </div>
     </nav>

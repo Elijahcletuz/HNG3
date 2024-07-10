@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import increase from '../../assets/Expand_down.svg';
 import decrease from '../../assets/Expand_up.svg';
@@ -8,10 +8,8 @@ import arrow from '../../assets/arrowright.png';
 import './Cart.css';
 
 export function Cart({ cart, setCart }) {
-  // State for total price
   const [totalPrice, setTotalPrice] = useState(0);
 
-  // Function to calculate total price
   useEffect(() => {
     let total = 0;
     cart.forEach(item => {
@@ -20,31 +18,27 @@ export function Cart({ cart, setCart }) {
     setTotalPrice(total);
   }, [cart]);
 
-  // Function to handle quantity changes
   const handleQuantityChange = (index, type) => {
     const newCart = [...cart];
     if (type === 'increase') {
       newCart[index].quantity += 1;
-    } else if (type === 'decrease' && newCart[index].quantity > 0) {
+    } else if (type === 'decrease' && newCart[index].quantity > 1) {
       newCart[index].quantity -= 1;
     }
     setCart(newCart);
   };
 
-  // Function to remove item from cart
   const handleRemoveItem = (index) => {
     const newCart = [...cart];
     newCart.splice(index, 1);
     setCart(newCart);
   };
 
-  // Calculate delivery fee based on unique items
   const deliveryFee = 2000 + (Object.keys(cart.reduce((acc, item) => {
     acc[item.title] = true;
     return acc;
   }, {})).length - 1) * 500;
 
-  // Calculate total price including delivery fee
   const totalWithDelivery = totalPrice + deliveryFee;
 
   return (
@@ -95,18 +89,21 @@ export function Cart({ cart, setCart }) {
           ))}
          
           <div className='checkout_container'>
-                  
             <div className='discount'>
               <h3>Do you have a Discount?</h3>
-              <button className='discount_button'>Enter Your Coupon Code <img src={arrow} alt="" className='aroow_image' /></button>
+              <button className='discount_button'>
+                Enter Your Coupon Code <img src={arrow} alt="" className='aroow_image' />
+              </button>
             </div>
             <div className="checkout">
               <h3>Delivery</h3>
-              <button className='indrive'>InDrive <span>-₦{deliveryFee.toLocaleString()}</span> <img src={increase} alt="Decrease" /></button>
+              <button className='indrive'>
+                InDrive <span>-₦{deliveryFee.toLocaleString()}</span>
+                <img src={increase} alt="Decrease" />
+              </button>
               <h3>Total <span>₦{totalWithDelivery.toLocaleString()}</span></h3> {/* Display total with delivery fee */}
-              
-              <Link to='/checkout' > 
-                   <button className='proceed'>Proceed to Checkout</button>
+              <Link to={{ pathname: '/checkout' }} state={{ cart, totalPrice: totalWithDelivery }}> 
+                <button className='proceed'>Proceed to Checkout</button>
               </Link>
             </div>
           </div>
@@ -124,4 +121,3 @@ Cart.propTypes = {
 };
 
 export default Cart;
-
