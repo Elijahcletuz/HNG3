@@ -1,53 +1,66 @@
-import './Navbar.css'
-import { Link } from 'react-router-dom'
-import search from '../../assets/search.svg'
-import basket from '../../assets/basket.svg'
-export function Navbar(){
-  return(
-    <nav>
-        <Link to='/' className='link-style'>
-            <h1>YTBridal</h1>
-          </Link>
-            
-         <div className="icons">
-             <img src={search}  alt="" />
-           
-              <div className='carts_container'>
-                  <Link to='/Cart '><img src={basket} alt="" /></Link>
-                  {/* <div className="cart_count">0</div> */}
-              </div>
-         </div>
-    </nav>
-  )
+import './Navbar.css';
+import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import search from '../../assets/search.svg';
+import basket from '../../assets/basket.svg';
 
+export function Navbar({ cart }) {
+  // Calculate the total number of items in the cart
+  const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+
+  return (
+    <nav>
+      <Link to='/' className='link-style'>
+        <h1>YTBridal</h1>
+      </Link>
+
+      <div className="icons">
+        <img src={search} alt="" />
+        <div className='carts_container'>
+          <Link to='/Cart'><img src={basket} alt="" /></Link>
+          <div className="cart_count">{totalItems}</div>
+        </div>
+      </div>
+    </nav>
+  );
 }
+
+// Define prop types for Navbar
+Navbar.propTypes = {
+  cart: PropTypes.arrayOf(PropTypes.shape({
+    productpicture: PropTypes.string,
+    productpicturePhone: PropTypes.string,
+    title: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+    quantity: PropTypes.number.isRequired
+  })).isRequired
+};
+
+
+
 
 
 // import './Navbar.css'
-
+// import { Link } from 'react-router-dom'
 // import search from '../../assets/search.svg'
-// import user from '../../assets/user.svg'
-// import cart from '../../assets/basket.svg'
-
-// const Navbar = () => {
-//   return (
+// import basket from '../../assets/basket.svg'
+// export function Navbar(){
+//   return(
 //     <nav>
-//          <ul>
-//             <li>Home</li>
-//             <li>About</li>
-//             <li>Shop </li>
-//          </ul>
-
-//          <div>YourThrift</div>
+//         <Link to='/' className='link-style'>
+//             <h1>YTBridal</h1>
+//           </Link>
             
 //          <div className="icons">
 //              <img src={search}  alt="" />
-//               <div><img src={cart} alt="" /></div>
-//               <div><img src={user} alt="" /></div>
-
+           
+//               <div className='carts_container'>
+//                   <Link to='/Cart '><img src={basket} alt="" /></Link>
+//                   <div className="cart_count">0</div>
+//               </div>
 //          </div>
 //     </nav>
 //   )
+
 // }
 
-// export default Navbar

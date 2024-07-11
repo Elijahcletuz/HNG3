@@ -1,13 +1,16 @@
 import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import './Checkout.css';
-import visa from '../../assets/visa.png';
+import { Link } from 'react-router-dom';
+import visa from '../../assets/Visa.svg';
 import mastercard from '../../assets/mastercard.svg';
 import paypal from '../../assets/paypal.svg';
 import check from '../../assets/charm_circle-tick.svg';
 import close from '../../assets/Close_square.svg';
 import decrease from '../../assets/Expand_down.svg';
 import   increase from '../../assets/Expand_up.svg';
+import   backbutton from '../../assets/backarrow.svg';
+
 
 const Checkout = () => {
   const location = useLocation();
@@ -50,7 +53,12 @@ const Checkout = () => {
       <div className='nothing'>Nothing is in the cart</div>
     ) : (
       <div className='paycontainer'>
-       
+         <Link to='/Cart'>
+         <div className='backbutton'>
+            <img src={backbutton} alt="" />
+          </div>
+         </Link>
+          
 
         <div className="flex_pay">
               <div className="flex_Pay_left">
@@ -108,7 +116,7 @@ const Checkout = () => {
                 
           
             <div className='methods'>
-              <div className='bank'>
+              <div className='bank bank1'>
                 <img src={visa} alt="" />
                 <label htmlFor="visa"></label>
                 <input type="radio" name="payment-method" id="visa" />

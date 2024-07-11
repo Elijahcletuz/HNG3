@@ -11,7 +11,7 @@ function App() {
 
   return (
     <Router>
-      <Navbar />
+      <Navbar cart={cart} />
       <Routes>
         <Route path='/checkout' element={<Checkout cart={cart} />} />
         <Route path='/Cart' element={<Cart cart={cart} setCart={setCart} />} />

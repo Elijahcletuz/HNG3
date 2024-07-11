@@ -62,12 +62,11 @@ footer{
     height: 376px;
 }
 
-
 .line {
     height: 1.5px;
-    width: 100%;
+    width: 94%;
     background-color: #7c7c7c;
-    margin: 22px 0px;
+    margin: 1.5% 3%;
 }
 
 .headband2 img{
@@ -95,14 +94,9 @@ footer{
 
 
 .bridal_heading {
-    padding: 10px 37px 0px;
+    padding: 50px 37px 1px;
 }
-/* 
-.limiteds img {
-    height: 379px;
-    border-radius: 8px;
-    width: 380px;
-} */
+
 
 .phone_cart{
     display: none;
