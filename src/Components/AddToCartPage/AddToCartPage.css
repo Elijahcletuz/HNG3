@@ -190,7 +190,8 @@ footer h1 {
 
 
     .bridal_heading {
-        padding: 30px 4px 0px;
+        font-size: 20px;
+        padding: 30px 4px 0;
     }
 
 
@@ -251,10 +252,10 @@ footer h1 {
     }
 
  
-
     .general_container {
-        padding: 0px 15px;
-        background-color: #CBCBCB;
+        padding: unset;
+        margin: unset;
+        background-color: #cbcbcb;
     }
 
     .limitimage {
@@ -286,6 +287,27 @@ footer h1 {
 
 
       
+}
+
+@media screen and (min-width: 701px) and (max-width: 799px){
+    .headband {
+        padding-bottom: 35px;
+        display: flex;
+        width: 100%;
+        gap: 8px;
+        padding: 0px;
+    }
+
+    .group1 {
+        display: flex;
+        gap: 8px;
+        padding: 0px;
+    }
+
+    
+    
+    
+
 }
 
 
@@ -435,7 +457,7 @@ footer h1 {
     }
 
     .general_container {
-        padding: 0px 15px;
+        padding: 0px 15px 20px;
         background-color: #CBCBCB;
     }
 
@@ -465,6 +487,7 @@ footer h1 {
     .bridal_heading, .limited_heading {
         font-weight: 700;
         font-size: 20px;
+        padding: 30px 20px 10px;
         color: #333333;
     }
 

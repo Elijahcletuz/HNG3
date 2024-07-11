@@ -40,7 +40,7 @@ export function Functioncart({ product, cart, setCart }) {
                 </button>
             </div>
             
-            <p>Price: ${product.price}</p>
+            <p>Price: ₦{product.price}</p>
             
             <button onClick={handleClick} className="add-to-cart-button">
                 <div className='phone_none'>
