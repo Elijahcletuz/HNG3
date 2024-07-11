@@ -67,7 +67,6 @@ button{
 }
 
 button:hover{
-  color: #4E4E4E;
   scale: 1.03;
   font-weight: bold;
 
@@ -77,13 +76,9 @@ button:hover{
 @media screen and (min-width: 300px) and (max-width: 600px)  {
   .quantity_container {
     display: flex;
-    position: absolute;
-    right: 28%;
-    height: 36px;
-    width: 40px;
-    padding-left: 0px;
-    /* align-content: stretch; */
+    left: 39%;
 }
+ 
 
 .checkout_container {
   display: flex;
@@ -93,8 +88,8 @@ button:hover{
 }
 
 .checkout_container h3 {
-  font-size: 16px;
-  font-weight: 700;
+  font-size: 14px;
+  font-weight: 500;
   line-height: 39px;
   color: #4E4E4E;
 }

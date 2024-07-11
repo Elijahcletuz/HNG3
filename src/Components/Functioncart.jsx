@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import addcart from '../assets/basket.svg';
 
@@ -23,9 +23,11 @@ export function Functioncart({ product, cart, setCart }) {
         }, 500);
     };
 
+    const imageSource = product.productpicturePhone || product.productpicture;
+
     return (
         <div>
-            <img src={product.productpicture} alt={product.title} />
+            <img src={imageSource} alt={product.title} />
             <h2 className='phone_none'>{product.title}</h2>
             
             <div className='phone_cart'>

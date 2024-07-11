@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import './Checkout.css';
-import visa from '../../assets/Visa.svg';
+import visa from '../../assets/visa.png';
 import mastercard from '../../assets/mastercard.svg';
 import paypal from '../../assets/paypal.svg';
 import check from '../../assets/charm_circle-tick.svg';
@@ -98,6 +98,11 @@ const Checkout = () => {
           <div className="payment_info">
             
             <h1>Payment Info.</h1>
+            <div className='payment_phone'>
+                <h4>You’re almost there!</h4>
+                <span>Provide your credit card information to complete your purchase.</span>
+
+            </div>
             <h3>Payment method</h3>
          
                 
@@ -132,17 +137,18 @@ const Checkout = () => {
               </div>
 
               <div className="flexboth">
-                <div className="form_item1">
+                <div className="form_item1 expiry">
                   <label htmlFor="expiry">Expiry date</label>
                   <input type="text" id="expiry" placeholder='23/2027'/>
                 </div>
-                <div className="form_item1">
+                <div className="form_item1 cvv">
                   <label htmlFor="cvv">CVV</label>
                   <input type="text" id="cvv" placeholder='123' />
                 </div>
               </div>
+              <div className="line4"></div>
 
-              <div className="form_total">
+              <div className="form_total form_total1">
                 <p>Subtotal</p>
                 <p>₦{subtotal.toLocaleString()}</p>
               </div>
@@ -162,7 +168,9 @@ const Checkout = () => {
                 <p>Save details for future payments</p>
               </div>
             </form>
-            <button className='butch'>Checkout</button>
+           <div className="butch_container">
+             <button className='butch'>Checkout</button>
+           </div>
           </div>
         </div>
       </div>

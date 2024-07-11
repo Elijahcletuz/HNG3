@@ -47,6 +47,10 @@ export function Cart({ cart, setCart }) {
         Your Shopping Cart
       </div>
 
+      <div className='phonecart_header'>
+        Shopping Cart
+      </div>
+
       {cart.length > 0 ? (
         <>
           <div className="cart_item_titles">
@@ -61,7 +65,7 @@ export function Cart({ cart, setCart }) {
 
           {cart.map((item, index) => (
             <div key={index} className='design_cart'>
-              <img src={item.productpicture} alt="" className='cart_image' />
+              <img src={item.productpicturePhone || item.productpicture} alt="" className='cart_image' />
               <h2>{item.title}</h2>
               <h3>{item.price.toLocaleString()}</h3> {/* Format price with commas */}
               <div className='quantity_container'>
@@ -101,7 +105,7 @@ export function Cart({ cart, setCart }) {
                 InDrive <span>-₦{deliveryFee.toLocaleString()}</span>
                 <img src={increase} alt="Decrease" />
               </button>
-              <h3>Total <span>₦{totalWithDelivery.toLocaleString()}</span></h3> {/* Display total with delivery fee */}
+              <h3 className='flex_total'>Total <span>₦{totalWithDelivery.toLocaleString()}</span></h3> {/* Display total with delivery fee */}
               <Link to={{ pathname: '/checkout' }} state={{ cart, totalPrice: totalWithDelivery }}> 
                 <button className='proceed'>Proceed to Checkout</button>
               </Link>
@@ -109,7 +113,7 @@ export function Cart({ cart, setCart }) {
           </div>
         </>
       ) : (
-        <div className="empty_cart_message">Nothing is in the cart</div>
+        <div className="empty_cart_message">Your cart is empty.</div>
       )}
     </div>
   );
