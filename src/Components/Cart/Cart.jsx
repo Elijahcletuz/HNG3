@@ -105,7 +105,7 @@ export function Cart({ cart, setCart }) {
                 InDrive <span>-₦{deliveryFee.toLocaleString()}</span>
                 <img src={increase} alt="Decrease" />
               </button>
-              <h3 className='flex_total'>Total <span>₦{totalWithDelivery.toLocaleString()}</span></h3> {/* Display total with delivery fee */}
+              <h3 className='flex_total  totals'>Total <span>₦{totalWithDelivery.toLocaleString()}</span></h3> {/* Display total with delivery fee */}
               <Link to={{ pathname: '/checkout' }} state={{ cart, totalPrice: totalWithDelivery }}> 
                 <button className='proceed'>Proceed to Checkout</button>
               </Link>

@@ -183,6 +183,12 @@
 }
 
 
+.totals{
+    font-size: 30px;
+    font-weight: 800;
+    color: black !important;
+}
+
 @media screen and (min-width: 300px) and (max-width: 600px)  {
     .checkout_container {
         display: flex;
